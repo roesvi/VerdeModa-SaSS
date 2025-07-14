@@ -1,0 +1,38 @@
+@use '../abstracts/_mixins' as mixins;
+@use '../abstracts/_colors' as colors;
+@use '../abstracts/_functions' as functions;
+
+// Formularios
+.form-group {
+    margin-bottom: 20px;
+  
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: colors.$color-dark;
+    }
+  
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 1rem;
+      @include mixins.transition;
+  
+      &:focus {
+        outline: none;
+        border-color: colors.$color-primary;
+        box-shadow: 0 0 0 3px rgba(functions.shade(colors.$color-primary, 20%), 0.2);
+      }
+    }
+  
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+  }

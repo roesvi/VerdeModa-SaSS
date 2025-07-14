@@ -1,0 +1,50 @@
+@use '../abstracts/_mixins' as mixins;
+@use '../abstracts/_colors' as colors;
+
+// Tarjetas de productos
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  @include mixins.transition;
+  @include mixins.box-shadow(sm);
+  @include mixins.flex-column;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    @include mixins.box-shadow(md);
+  }
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    @include mixins.media-query('sm') {
+      height: 250px;
+    }
+  }
+
+  &-content {
+    padding: 20px;
+    flex-grow: 1;
+    @include mixins.flex-column;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: colors.$color-dark;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: colors.$color-primary;
+    margin-bottom: 15px;
+    flex-grow: 1;
+  }
+}

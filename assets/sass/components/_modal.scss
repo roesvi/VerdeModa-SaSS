@@ -1,0 +1,80 @@
+@use '../abstracts/_colors' as colors;
+@use '../abstracts/_mixins' as mixins;
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+
+    &__content {
+        background-color: var(--light-color);
+        margin: 10% auto;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        position: relative;
+    }
+
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--secondary-color);
+
+        &:hover,
+        &:focus {
+            color: var(--primary-color);
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__description {
+        font-size: 1rem;
+        color: var(--dark-color);
+        margin-bottom: 1rem;
+    }
+
+
+    &__price {
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+    }
+
+    @include mixins.media-query('xs') {
+        &__content {
+            padding: 1rem;
+            margin: 5% auto; // Ajusta el margen superior para móviles
+        }
+
+        &__title {
+            font-size: 1.3rem;
+        }
+
+        &__price {
+            font-size: 1.1rem;
+        }
+    }
+}

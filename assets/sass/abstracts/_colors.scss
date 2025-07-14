@@ -1,0 +1,50 @@
+// Mapa de colores
+$color-primary: #2a7f62;
+$color-secondary: #FFC107;
+$color-light: #F5F5F5;
+$color-dark: #333;
+$color-whatsapp: #25D366;
+$color-facebook: #3B5998;
+$color-instagram: #E1306C;
+$color-twitter: #1DA1F2;
+$color-pinterest: #E60023;
+$color-white: #fff;
+$color-gray: #ccc;
+$color-red: #E60023;
+$color-green: #25D366;
+$color-yellow: #FFC107;
+$color-blue: #1DA1F2;
+$color-purple: #E1306C;
+$color-orange: #FFC107;
+$color-pink: #E60023;
+
+// Shadow variables
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+$colors: (
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'light': $color-light,
+  'dark': $color-dark,
+  'whatsapp': $color-whatsapp,
+  'facebook': $color-facebook,
+  'instagram': $color-instagram,
+  'twitter': $color-twitter,
+  'pinterest': $color-pinterest
+);
+
+// Clases de utilidad para colores
+@each $name, $color in $colors {
+  .color-#{$name} {
+    color: $color;
+  }
+  
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  
+  .border-#{$name} {
+    border-color: $color;
+  }
+}

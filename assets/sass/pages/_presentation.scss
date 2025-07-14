@@ -1,0 +1,85 @@
+@use '../abstracts/_mixins' as mixins;
+@use '../abstracts/_colors' as colors;
+
+.presentation {
+    padding: 5rem 0;
+    background-color: colors.$color-light;
+  
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4rem;
+    }
+  
+    &__text {
+      flex: 1;
+      min-width: 300px;
+    }
+  
+    &__description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: colors.$color-dark;
+      margin-bottom: 2rem;
+    }
+  
+    &__features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+  
+    &__image {
+      flex: 1;
+      min-width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+  
+    &__img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+  
+    &__image:hover &__img {
+      transform: scale(1.05);
+    }
+  
+    @include mixins.media-query('lg') {
+      &__content {
+        flex-direction: column;
+      }
+  
+      &__text,
+      &__image {
+        flex: none;
+        width: 100%;
+      }
+  
+      &__features {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+
+.featured {
+  padding: 5rem 0;
+  background-color: colors.$color-white;
+}
+
+.grid--3cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  
+  @include mixins.media-query('mobile') {
+    grid-template-columns: 1fr;
+  }
+}

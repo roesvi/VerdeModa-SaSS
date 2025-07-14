@@ -1,0 +1,35 @@
+@use '../abstracts/_colors' as colors;
+@use '../abstracts/_mixins' as mixins;
+
+// Utilidades
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  @include mixins.box-shadow(md);
+  
+  @include mixins.media-query('sm') {
+    width: 95%;
+    padding: 15px;
+    margin: 10px auto;
+  }
+  
+  @include mixins.media-query('xs') {
+    width: 100%;
+    padding: 10px;
+    margin: 5px auto;
+    border: none;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  @include mixins.flex-center;
+}
+
+.flex-column {
+  @include mixins.flex-column;
+}

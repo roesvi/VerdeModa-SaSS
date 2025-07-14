@@ -1,0 +1,27 @@
+@use '../abstracts/_colors' as colors;
+@use '../abstracts/_mixins' as mixins;
+@use '../base/_reset' as reset;
+
+
+// íconos acerca de
+
+.feature__icon {
+    font-size: 2.5rem;
+    color: colors.$color-primary;
+    margin-bottom: 1rem;
+}
+
+
+//íconos footer
+
+.fa-map-marker-alt {
+    color: colors.$color-white;
+}
+
+.fa-phone {
+    color: colors.$color-white;
+}
+
+.fa-envelope {
+    color: colors.$color-white;
+}

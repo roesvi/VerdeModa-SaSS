@@ -1,0 +1,19 @@
+@use '../abstracts/_colors' as colors;
+@use '../abstracts/_mixins' as mixins;
+
+// Funciones personalizadas
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+  }
+  
+  @function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+  }
+  
+  @function color-contrast($color) {
+    @if (lightness($color) > 60) {
+      @return colors.$color-dark;
+    } @else {
+      @return colors.$color-light;
+    }
+  }

@@ -1,0 +1,35 @@
+@use '../abstracts/_mixins' as mixins;
+@use '../abstracts/_colors' as colors;
+
+// Sistema de grillas
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+  
+    @include mixins.media-query('xs') {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .contact-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  
+    @include mixins.media-query('md') {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .product-detail .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  
+    @include mixins.media-query('md') {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }

@@ -1,0 +1,45 @@
+@use './_colors' as colors;
+@use './_variables' as vars; // Changed namespace to avoid conflict
+
+// Mixins
+@mixin box-shadow($level: sm) {
+  @if $level == sm {
+    box-shadow: vars.$shadow-sm;
+  } @else if $level == md {
+    box-shadow: vars.$shadow-md;
+  } @else {
+    box-shadow: $level;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin transition($property: all) {
+  transition: $property vars.$transition;
+}
+
+@mixin media-query($breakpoint) {
+  @if map-has-key(vars.$breakpoints, $breakpoint) {
+    @media (max-width: map-get(vars.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}

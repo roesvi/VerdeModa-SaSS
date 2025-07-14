@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - VerdeModa</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="branding">
+                <h1><span class="highlight">Verde</span>Moda</h1>
+                <p class="slogan">Tu estilo, nuestra pasión</p>
+            </div>
+            <div class="logo">
+                <img src="./img/logo.jpg" alt="Logo VerdeModa">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="current"><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="catalog">
+        <div class="container">
+            <h2>Nuestro Catálogo</h2>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="vestuario">Vestuario</button>
+                <button class="filter-btn" data-category="accesorios">Accesorios</button>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-category="vestuario">
+                    <img src="./img/abrigo.jpg" alt="Abrigo de invierno">
+                    <div class="product-card-content">
+                        <h3>Abrigo de Invierno</h3>
+                        <p>$59.990</p>
+                        <a href="producto.html" class="btn">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="accesorios">
+                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Bolso elegante">
+                    <div class="product-card-content">
+                        <h3>Bolso Elegante</h3>
+                        <p>$39.990</p>
+                        <a href="producto.html" class="btn">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="vestuario">
+                    <img src="./img/vestido.jpg" alt="Vestido elegante">
+                    <div class="product-card-content">
+                        <h3>Vestido Elegante</h3>
+                        <p>$49.990</p>
+                        <a href="producto.html" class="btn">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="accesorios">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=799&q=80" alt="Reloj moderno">
+                    <div class="product-card-content">
+                        <h3>Reloj Moderno</h3>
+                        <p>$29.990</p>
+                        <a href="producto.html" class="btn">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="vestuario">
+                    <img src="./img/blusa.jpg" alt="Blusa elegante">
+                    <div class="product-card-content">
+                        <h3>Blusa Elegante</h3>
+                        <p>$24.990</p>
+                        <a href="producto.html" class="btn">Ver Detalles</a>
+                    </div>
+                </div>
+                <div class="product-card" data-category="accesorios">
+                    <img src="./img/collarPlata.jpg" alt="Collar de plata">
+                    <div class="product-card-content">
+                        <h3>Collar de Plata</h3>
+                        <p>$19.990</p>
+                        <a href="producto.html" class="btn">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>VerdeModa &copy; 2025 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

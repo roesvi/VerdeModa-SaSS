@@ -1,0 +1,35 @@
+@use '../abstracts/_colors' as colors;
+@use '../abstracts/_mixins' as mixins;
+
+.feature {
+    text-align: center;
+    padding: 1.5rem;
+    background: colors.$color-white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    @include mixins.transition;
+    border: 1px solid colors.$color-primary;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    &__icon {
+        font-size: 2.5rem;
+        color: colors.$color-primary;
+        margin-bottom: 1rem;
+    }
+    
+    &__title {
+        font-size: 1.3rem;
+        color: colors.$color-primary;
+        margin-bottom: 0.5rem;
+    }
+    
+    &__text {
+        font-size: 0.95rem;
+        color: colors.$color-dark;
+        line-height: 1.5;
+    }
+}    

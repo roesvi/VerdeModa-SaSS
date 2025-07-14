@@ -1,0 +1,63 @@
+// Cabecera
+@use '../abstracts/_mixins' as mixins;
+@use '../abstracts/_colors' as colors;
+
+header {
+  width: 100%;
+  padding: 10px;
+  background: colors.$color-white;
+  @include mixins.box-shadow(sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  @include mixins.media-query('sm') {
+    padding: 15px;
+  }
+
+  @include mixins.media-query('xs') {
+    padding: 10px;
+  }
+}
+
+.branding {
+  @include mixins.flex-column;
+}
+
+.logo-container {
+  @include mixins.flex-center;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: colors.$color-primary;
+  @include mixins.flex-center;
+  @include mixins.box-shadow(md);
+  @include mixins.transition;
+  //overflow: hidden;
+
+  &:hover {
+    transform: rotate(10deg) scale(1.05);
+  }
+
+   img {
+    height: auto;
+   }
+
+   &:hover {
+    background: colors.$color-primary;
+   }
+}

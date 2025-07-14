@@ -1,0 +1,23 @@
+@use '../abstracts/_mixins' as mixins;
+@use '../abstracts/_colors' as colors;
+
+// Pie de página
+footer {
+    padding: 20px;
+    background-color: colors.$color-dark;
+    color: colors.$color-white;
+    margin-top: 50px;
+    @include mixins.flex-center;
+  
+    p {
+      font-size: 0.9rem;
+    }
+  
+    @include mixins.media-query('sm') {
+      padding: 15px;
+    }
+  
+    @include mixins.media-query('xs') {
+      padding: 10px;
+    }
+  }

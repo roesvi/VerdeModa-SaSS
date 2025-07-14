@@ -1,0 +1,23 @@
+// Variables globales
+$font-primary: 'Arial', sans-serif;
+$font-size-base: 16px;
+$font-size-h1: 32px;
+$font-size-h2: 24px;
+$font-size-small: 14px;
+
+$spacing-extra-small: 0.25rem;
+$spacing-small: 0.5rem;
+$spacing-medium: 1rem;
+$spacing-large: 1.5rem;
+$spacing-extra-large: 2rem;
+
+$shadow-sm: 0 2px 5px rgba(0,0,0,0.1);
+$shadow-md: 0 5px 15px rgba(0,0,0,0.1);
+$transition: all 0.3s ease; // Added missing variable
+
+$breakpoints: (
+  'xs': 480px,
+  'sm': 768px,
+  'md': 992px,
+  'lg': 1200px
+);
