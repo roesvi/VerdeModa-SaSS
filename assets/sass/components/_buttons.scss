@@ -4,23 +4,19 @@
 
 // Botones
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  @include mixins.transition;
-  text-align: center;
-  background-color: colors.$color-primary;
-  color: white;
-  font-size: 1rem;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid colors.$color-primary;
+  border-radius: 5px;
+  background-color: colors.$light;
+  color: colors.$color-primary;
+  text-decoration: none;
+  margin: 5px;
+  transition: 0.3s ease-in-out;
 
   &:hover {
     background-color: functions.shade(colors.$color-primary, 20%); // Fixed function call
-    transform: translateY(-2px);
+    color: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
 

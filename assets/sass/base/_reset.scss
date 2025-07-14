@@ -1,22 +1,46 @@
-
 @use '../abstracts/_colors' as colors;
 @use '../abstracts/_mixins' as mixins;
 
-/* ===== ESTILOS BASE UNIFICADOS ===== */
+/* ===== ESTILOS// Reset y variables globales */
 *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: colors.$color-dark;
-    background-color: colors.$color-white;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: colors.$color-dark;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: mixins.$spacing-medium;
+}
+
+h1 {
+  font-size: mixins.$font-size-h1;
+}
+
+h2 {
+  font-size: mixins.$font-size-h2;
+  color: colors.$primary;
+  text-align: center;
+  margin-bottom: mixins.$spacing-extra-large;
+}
+
+h3 {
+  font-size: mixins.$font-size-base * 1.5;
+}
+
+p {
+  margin-bottom: mixins.$spacing-medium;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

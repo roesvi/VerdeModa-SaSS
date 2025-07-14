@@ -15,7 +15,7 @@
     overflow: auto;
 
     &__content {
-        background-color: var(--light-color);
+        background-color: colors.$color-white;
         margin: 10% auto;
         padding: 2rem;
         border-radius: 10px;
@@ -31,11 +31,11 @@
         right: 1rem;
         font-size: 1.5rem;
         cursor: pointer;
-        color: var(--secondary-color);
+        color: colors.$color-secondary;
 
         &:hover,
         &:focus {
-            color: var(--primary-color);
+            color: colors.$color-primary;
         }
     }
 
@@ -53,14 +53,14 @@
 
     &__description {
         font-size: 1rem;
-        color: var(--dark-color);
+        color: colors.$color-dark;
         margin-bottom: 1rem;
     }
 
 
     &__price {
         font-size: 1.2rem;
-        color: var(--secondary-color);
+        color: colors.$color-secondary;
     }
 
     @include mixins.media-query('xs') {

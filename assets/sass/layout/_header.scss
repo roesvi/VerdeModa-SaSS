@@ -2,10 +2,12 @@
 @use '../abstracts/_mixins' as mixins;
 @use '../abstracts/_colors' as colors;
 
+// Header
 header {
   width: 100%;
   padding: 10px;
-  background: colors.$color-white;
+  background-color: colors.$primary;
+  color: colors.$text-light;
   @include mixins.box-shadow(sm);
   position: sticky;
   top: 0;
